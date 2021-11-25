@@ -1,29 +1,38 @@
-" Munta's Very Bad INIT.VIM
-" 11/9/2021
-" Work in progress
- 
-" Plugins
+" Plugins {{{
 call plug#begin('~/local/share/nvim/plugged')
+" Colorschemes
 Plug 'adryd325/vim-adryd-monokai'
-Plug 'jacoborus/tender.vim'
-Plug 'sickill/vim-monokai'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'overcache/NeoSolarized'
 Plug 'morhetz/gruvbox'
-Plug 'preservim/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'tmsvg/pear-tree'
 Plug 'dracula/vim'
-Plug 'ErichDonGubler/vim-sublime-monokai'
-Plug 'Shougo/context_filetype.vim'
+Plug 'tomasiser/vim-code-dark'
+Plug 'jacoborus/tender.vim'
+" Lightline status bar
+Plug 'itchyny/lightline.vim'
+" Prettier format
+Plug 'prettier/vim-prettier', {'do': 'yarn install' } 
+" Autocompletion and Intellisense
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" File tree
+Plug 'preservim/nerdtree'
+" Autopairs
+Plug 'jiangmiao/auto-pairs'
+" Autoformat code
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 call plug#end()
- 
+" }}}
+
+" General {{{
+
 " Syntax Highlighting
 syntax on
 set exrc
-set t_Co=256
 set clipboard=unnamed
+set foldmethod=marker
+set foldlevel=0
+set modelines=1
 " Block cursor
+" set guicursor=
 " Line numbers, and in normal mode has relative numbers
 set nu
 augroup numbertoggle
@@ -32,7 +41,7 @@ augroup numbertoggle
     autocmd BufLeave,FocusLost,InsertEnter * set nornu
 augroup ENDf mode() == "i"
 " Some load thingy
-set hidden
+" set hidden
 " Fixes weird backspace not working in insert
 set backspace=2
 " No backup files
@@ -40,6 +49,12 @@ set noswapfile
 " No backup files
 set nobackup
 set nowritebackup
+" for lightline
+set laststatus=2
+" hides mode text on bottom
+set noshowmode
+" Replace tabs with space
+set expandtab
 " No highlighted words in search
 set nohlsearch
 " Scrolls 4 lines before
@@ -53,22 +68,17 @@ set signcolumn=yes
 " No error bells
 set belloff=all
 " Tab length
-set tabstop=4 softtabstop=4 shiftwidth=4
+set tabstop=2 softtabstop=2 shiftwidth=2
 " Better display for messages
 set cmdheight=2
 " Disables complete preview
 set completeopt-=preview
  
- 
 source $HOME/.config/nvim/plug-config/coc.vim
-autocmd TermOpen * startinsert
-let g:node_client_debug = 1
-let g:coc_node_path='/usr/bin/nodejs'
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#popup_on_dot = 1
-let g:jedi#use_tabs_not_buffers = 0
-let g:jedi#enviroment_path="/usr/bin/python3.8"
- 
+" }}}
+
+" Keybinds {{{
+
 " Compile and Run Code
 autocmd FileType javascript nnoremap <buffer> <C-c> :w <bar> :terminal node "%" <CR>
 autocmd FileType python nnoremap <buffer> <C-c> :w <bar> :terminal python3 "%" <CR>
@@ -89,7 +99,23 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+" }}}
 
-colorscheme gruvbox
-let g:airline_theme='gruvbox'
-hi Normal guibg=NONE ctermbg=NONE
+" Colors {{{
+set termguicolors
+set winblend=0
+set wildoptions=pum
+set pumblend=5
+colorscheme NeoSolarized
+let g:neosolarized_termtrans=1
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
+if !has("gui_running")
+    set t_Co=256
+endif
+" highlight Normal guibg=none
+" highlight NonText guibg=none
+" }}}
+
+" vim:foldmethod=marker:foldlevel=0
