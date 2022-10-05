@@ -1,9 +1,3 @@
-# Hello World 
-
-Recently started using GitHub (as of Nov 7th 2021)\
-I just put my projects that I work on here for easy access <img style="float: right;" src="whatever.jpg">
-
-```python
 #!/usr/bin/env python3
 
 class AverageCSStudent:
@@ -23,5 +17,3 @@ class AverageCSStudent:
 if __name__ == '__main__':
     munta = AverageCSStudent()
     munta.hello()
-```
-
