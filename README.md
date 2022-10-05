@@ -1,17 +1,16 @@
 # Hello World 👨🏽‍💻
 
-Recently started using GitHub (as of Nov 7th 2021)\
-I just put my projects that I work on here for easy access 
-
 ```python
 #!/usr/bin/env python3
 
 class AverageCSStudent:
     def __init__(self):
         self.name = "Muntasirul Islam"
+        self.start = [11,7,2021]
         self.preferred_name = "Munta"
         self.pronouns = "he/him"
         self.lang = "en_US"
+        self.dev = ["python", "java"]
         self.role = "CS Student"
         self.college = "Toronto Metropolitan University"
 
@@ -24,4 +23,3 @@ if __name__ == '__main__':
     munta = AverageCSStudent()
     munta.hello()
 ```
-
