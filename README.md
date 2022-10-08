@@ -1,4 +1,4 @@
-# Hello World 👨🏽‍💻
+# Hello World 👨🏽‍💻 <img href="https://github.com/muntalee" align='right' src="https://i.imgur.com/x45MFlk.png" width="75">
 
 ```python
 #!/usr/bin/env python3
@@ -23,3 +23,4 @@ if __name__ == '__main__':
     munta = AverageCSStudent()
     munta.hello()
 ```
+
