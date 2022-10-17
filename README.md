@@ -17,7 +17,7 @@ class AverageCSStudent:
     def hello(self):
         print("Hello there! Thank you for visiting my GitHub Page!")
         print("I'm working towards a portfolio website for myself, but for now this will do")
-        print("But for now, look around, give me some stars, whatever you like")
+        print("Look around, give me some stars, whatever you like")
 
 if __name__ == '__main__':
     munta = AverageCSStudent()
