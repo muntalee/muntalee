@@ -1,5 +1,5 @@
-# Hello World 👨🏽‍💻 <img href="https://github.com/muntalee" align='right' src="https://i.imgur.com/x45MFlk.png" width="75">
-
+# Hello :D 👨🏽‍💻 <a href='https://muntalee.net/'><img align='right' src="https://i.imgur.com/x45MFlk.png" width="75"></a>
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=muntalee&theme=dark&show_icons=true)
 ```python
 #!/usr/bin/env python3
 
