@@ -1,4 +1,4 @@
-# Hello :D 👨🏽‍💻 <a href='https://muntalee.net/'><img align='right' src="https://i.imgur.com/x45MFlk.png" width="75"></a>
+# Hello! 👨🏽‍💻 <a href='https://muntalee.net/'><img align='right' src="https://i.imgur.com/x45MFlk.png" width="75"></a>
 
 ### Languages
 <div>
@@ -32,6 +32,7 @@
   <img alt="VS Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-007ACC.svg?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white" height="25">
 </div>
 
+--------------------------------------------
 
 ```python
 #!/usr/bin/env python3
