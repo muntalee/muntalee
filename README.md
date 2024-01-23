@@ -58,4 +58,6 @@ if __name__ == '__main__':
     munta.hello()
 ```
 
+--------------------------------------------
+
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=muntalee&theme=dark&show_icons=true)
